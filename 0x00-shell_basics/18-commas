@@ -1,2 +1,2 @@
 #!/bin/ba
-ls -map
+ls -amp
