@@ -1,0 +1,1 @@
+how to check for and change permissions
