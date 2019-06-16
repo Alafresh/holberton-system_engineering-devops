@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/ssh/sshd_config | tr [:digit:] -c
+grep ^[Aa-Zz] /etc/ssh/sshd_config
