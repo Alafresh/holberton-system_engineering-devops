@@ -6,6 +6,7 @@ do
   if [ $n == 9 ]
   then
     echo "Hi"
+    echo "Holberton School"
   fi
   echo "Holberton School"
   n=$(( n + 1))
