@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# bad luck from China for the 4th loop iteration Japan for the 9th and Italy for the 17th
 n=1
 while [ $n -le 20 ]
 do

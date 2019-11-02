@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# that displays the content of the current directory
 for f in *; do
   echo "$f"
 done
