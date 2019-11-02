@@ -3,5 +3,5 @@
 FILENAME="/etc/passwd"
 while IFS=: read -r USERNAME PASSWORD ID GROUP_ID COMMENT HOME_DIRECTORY COMMANDSHELL
 do
-  echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMANDSHELL. $ID place is protected by the passcode $PASSWORD, more info about the user here: $COMMENT"
+  echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMANDSHELL. $ID's place is protected by the passcode $PASSWORD, more info about the user here: $COMMENT"
 done < $FILENAME
