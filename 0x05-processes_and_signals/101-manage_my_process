@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # manage other process with the flags
+f="/var/run/my_process.pid"
 
 termi() {
   trap - SIGTERM
@@ -8,15 +9,15 @@ termi() {
 
 sta() {
   
-  echo "$BASHPID" >> /var/run/my_process.pid
+  echo "$BASHPID" >> "$f"
   ./manage_my_process &
 }
 
 sto() {
   
-  rm /var/run/my_process.pid 
+  rm $f
   trap termi SIGTERM
-  pkill -f manage_my_process
+  pkill $BASHPID
 }
 
 if [ $# != 0 ]
