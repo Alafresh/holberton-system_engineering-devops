@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# manage other process with the flags
+
+termi() {
+  trap - SIGTERM
+  exit
+}
+
+sta() {
+  
+  echo "$BASHPID" >> /var/run/my_process.pid
+  ./manage_my_process &
+}
+
+sto() {
+  
+  rm /var/run/my_process.pid 
+  trap termi SIGTERM
+  pkill -f manage_my_process
+}
+
+if [ $# != 0 ]
+then
+  case "$1" in
+    start)
+      sta
+      echo "manage_my_process started"
+      ;;
+    stop)
+      echo "manage_my_process stopped"
+      sto
+      ;;
+    restart)
+      echo "manage_my_process restarted"
+      sto
+      sta
+      ;;
+    *)
+    echo "Usage: manage_my_process {start|stop|restart}"
+  esac
+else
+  echo "Usage: manage_my_process {start|stop|restart}"
+fi
