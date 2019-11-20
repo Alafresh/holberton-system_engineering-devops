@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # IP + port = socket
-argc=("$#")
-argv=("$@")
-if [ $argc -eq 1 ]
+if [ "$#" -eq 1 ]
 then 
-  ping -t 5 $argv
+  ping -t 5 "$@"
 else
   echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 fi
