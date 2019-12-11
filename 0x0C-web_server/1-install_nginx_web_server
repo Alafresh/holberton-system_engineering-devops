@@ -2,3 +2,4 @@
 # this script install nginx inside the server and configuret it.
 ssh -i key ubuntu@35.231.113.169 'sudo apt-get -y install nginx'
 ssh -i key ubuntu@35.231.113.169 'echo Holberton School | sudo tee /var/www/html/index.nginx-debian.html'
+service nginx restart
