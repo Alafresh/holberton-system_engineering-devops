@@ -11,4 +11,4 @@ echo "backend http_back
    balance roundrobin
    server 868-web-01 35.231.113.169:80 check
    server 868-web-02 34.73.247.107:80 check" >> /etc/haproxy/haproxy.cfg
-sudo systemctl haproxy restart
+sudo systemctl reload haproxy
