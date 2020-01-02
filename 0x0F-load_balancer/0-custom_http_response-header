@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# this is a comment
 apt-get update
 apt-get -y install nginx
 line="add_header X-Served-By $HOSTNAME;"
