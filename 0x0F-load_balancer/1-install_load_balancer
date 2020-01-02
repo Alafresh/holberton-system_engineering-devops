@@ -4,6 +4,7 @@ apt-get -y update
 apt-get -y install haproxy=2.0.\*
 echo "frontend http_front
    bind *:80
+   mode http
    stats uri /haproxy?stats
    default_backend http_back
 
