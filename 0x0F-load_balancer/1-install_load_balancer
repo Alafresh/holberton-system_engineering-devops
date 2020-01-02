@@ -1,14 +1,12 @@
-#!/usr/bin/env bash
-# this is a comment
 apt-get -y update
 apt-get -y install haproxy=2.0.\*
 echo "frontend http_front
    bind *:80
-   mode http
    stats uri /haproxy?stats
-   default_backend http_back" >> /etc/haproxy/haproxy.cfg
-echo "backend http_back
+   default_backend http_back
+
+backend http_back
    balance roundrobin
    server 868-web-01 35.231.113.169:80 check
    server 868-web-02 34.73.247.107:80 check" >> /etc/haproxy/haproxy.cfg
-sudo systemctl reload haproxy
+sudo systemctl restart haproxy
