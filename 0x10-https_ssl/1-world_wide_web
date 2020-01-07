@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This is a comment
 bash_function () {
   if [ -z $2 ]; then
     dig www.$1 | awk 'f;/ANSWER SECTION:/{f=1}' | head -n 1 | awk '{print "The subdomain www is a " $4 " record and points to " $5}'
