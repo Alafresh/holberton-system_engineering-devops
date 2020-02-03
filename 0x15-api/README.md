@@ -1,0 +1,25 @@
+# README 
+#### Learning Objectives!
+this project is about:
+  - What is an API
+  - What is a REST API
+  - What are microservices
+  - What is the CSV format
+  - What is the JSON format
+  - Pythonic Package and module name style
+  - Pythonic Class name style
+  - Pythonic Variable name style
+  - Pythonic Function name style
+  - Pythonic Constant name style
+  - Significance of CapWords or CamelCase in Python
+
+### Gather data from an API
+>
+> 0-gather_data_from_an_API.py "returns information about his/her TODO list progress."
+>
+> 1-export_to_CSV.py "Python script to export data in the CSV format."
+>
+> 2-export_to_JSON.py "Python script to export data in the JSON format."
+>
+> 3-dictionary_of_list_of_dictionaries.py "Python script to export data in the JSON format."
+>
